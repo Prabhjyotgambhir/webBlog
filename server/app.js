@@ -8,7 +8,7 @@ app.get('/api', (req,res) => {
     res.send('Working');
 });
 
-app.use(express.static(path.join(__dirname, '/../dist')));
+app.use(express.static(path.join(process.env.PWD || __dirname, '/../dist')));
 
 
 // Server running at port 3000
@@ -20,5 +20,5 @@ app.listen(process.env.PORT, (req,res) => {
 //     res.sendFile(path.join('../'  +__dirname, 'dist/index.html'));
 //   });
 
-app.get('/', function(req, res) { res.sendFile(path.join(__dirname + '/../dist/index.html')); })
+app.get('/', function(req, res) { res.sendFile(path.join(process.env.PWD || __dirname + '/../dist/index.html')); })
 

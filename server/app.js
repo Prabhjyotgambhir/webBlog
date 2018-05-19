@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '/../dist')));
 
 
 // Server running at port 3000
-app.listen(2000, (req,res) => {
+app.listen(process.env.PORT, (req,res) => {
     console.log('Server running at port: ', process.env.PORT);
 });
 

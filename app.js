@@ -7,20 +7,13 @@ var appDir = path.dirname(require.main.filename);
 app.get('/api', (req,res) => {
     res.send('Working');
 });
+
 app.use(express.static(path.join(process.env.PWD, 'dist')));
 
-app.get('/dashboard', function(req, res) { res.sendFile(path.join(process.env.PWD + 'dist/index.html')); })
+app.get('/', function(req, res) { res.sendFile(path.join(process.env.PWD + 'dist/index.html')); })
 
-
-
-
-// Server running at port 3000
 app.listen(process.env.PORT, (req,res) => {
     console.log('Server running at port: ', process.env.PORT);
 });
-
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join('../'  +__dirname, 'dist/index.html'));
-//   });
 
 

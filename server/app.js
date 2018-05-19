@@ -10,3 +10,6 @@ app.get('/', (req,res) => {
 app.listen(process.env.PORT, (req,res) => {
     console.log('Server running at port: ', process.env.PORT);
 });
+
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));   

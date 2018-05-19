@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.full-width {
+    width: 100% !important;
+}
+
+.margin-auto {
+    margin: auto !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.full-vh {
+    height: 100vh !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.vertical-align {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: max-content !important;
+    margin: auto !important;
+}

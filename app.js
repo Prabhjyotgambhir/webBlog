@@ -7,9 +7,9 @@ var appDir = path.dirname(require.main.filename);
 app.get('/api', (req,res) => {
     res.send('Working');
 });
-app.use(express.static(path.join(process.env.PWD, '/../dist')));
+app.use(express.static(path.join(process.env.PWD, 'dist')));
 
-app.get('/dashboard', function(req, res) { res.sendFile(path.join(process.env.PWD + '/../dist/index.html')); })
+app.get('/dashboard', function(req, res) { res.sendFile(path.join(process.env.PWD + 'dist/index.html')); })
 
 
 
